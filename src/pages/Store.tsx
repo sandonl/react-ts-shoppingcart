@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { StoreItem } from "../components/StoreItem";
-import { fetchStoreItems, Item } from "../data/fetchStoreItems";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export const Store = () => {
-  const [storeItems, setStoreItems] = useState<Item[]>([]);
+  // // const [storeItems, setStoreItems] = useState<Item[]>([]);
 
-  useEffect(() => {
-    fetchStoreItems()
-      .then((response) => setStoreItems(response))
-      .catch((error) => console.log(error));
-    console.log("Store useEffect ran");
-  }, []);
+  const { storeItems } = useShoppingCart();
+
+  // useEffect(() => {
+  //   fetchStoreItems()
+  //     .then((response) => setStoreItems(response))
+  //     .catch((error) => console.log(error));
+  //   console.log("Store useEffect ran");
+  // }, []);
 
   return (
     <>
