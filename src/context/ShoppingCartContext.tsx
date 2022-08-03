@@ -44,6 +44,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   );
   const [storeItems, setStoreItems] = useState<Item[]>([]);
 
+  // Fetches and sets the stores items upon app load.
   useEffect(() => {
     fetchStoreItems()
       .then((response) => setStoreItems(response))
