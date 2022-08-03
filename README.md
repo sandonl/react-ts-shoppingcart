@@ -11,8 +11,5 @@ Data pulled from: https://fakestoreapi.com/
 
 Keywords: React, Typescript, Bootstrap
 
-To run locally:
-
-```
-  yarn dev
-```
+Demo:
+https://react-ts-shoppingcart-8n061av71-sandonl.vercel.app/store
