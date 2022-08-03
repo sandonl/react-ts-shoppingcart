@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export type Item = {
+export interface Item {
   id: number;
   title: string;
   price: number;
@@ -8,7 +8,7 @@ export type Item = {
   category: string;
   image: string;
   rating: object;
-};
+}
 
 export async function fetchStoreItems(): Promise<Item[]> {
   // 👇️ const data: GetUsersResponse
